@@ -12,6 +12,6 @@ minimal: minimal.o pixelflut.o
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -f *.o minimal
+	rm -f *.o $(PROGS)
 
-.PHONY: all $(PROGS)
+.PHONY: all clean
