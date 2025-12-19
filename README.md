@@ -1,9 +1,10 @@
 # libpixelflut
 
 This is a convenience layer for pixelflut clients.
+It consists of one header, `pixelflut.h`, and the associated source file.
 
 ## Quick Example
-TODO
+See `minimal.c` in this folder.
 
 ## Features
 - support for all pixelflut commands (except `HELP`)
