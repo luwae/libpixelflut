@@ -19,7 +19,9 @@ pf_get(&conn, &px);
 px.r = ~px.r;
 px.g = ~px.g;
 px.b = ~px.b;
-pf_put(&conn, &px);
+pf_put_rgb(&conn, &px);
+
+pf_disconnect(&conn);
 ```
 
 You are strongly encouraged to do error handling, which is not included here.
