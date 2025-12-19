@@ -2,7 +2,6 @@
 #define LIB_PIXELFLUT_H
 
 #include <stdint.h>
-#include <stdbool.h>
 #include <stddef.h>
 
 #define PF_BUG_CATCHING
@@ -11,25 +10,29 @@
 // The value `0` means success, all other values encode various errors.
 enum pf_result {
     PF_OK = 0,
+
+    // invalid arguments
     PF_CONN_INVALID_STATE,
     PF_NULL_ARG,
 
+    // connection
     PF_CONNECT_PARSE_ADDR,
     PF_CONNECT_PARSE_PORT,
     PF_SYS_SOCKET,
     PF_SYS_CONNECT,
 
+    // I/O
     PF_SYS_WRITE,
     PF_SYS_READ,
-
-    PF_READ_TOO_MUCH,
-
     PF_SYS_WRITE_RETURNED_ZERO,
-
     PF_SYS_READ_RETURNED_ZERO,
+
+    // protocol
     PF_PROTOCOL_ERROR,
+    PF_READ_TOO_MUCH,
     PF_GET_UNEXPECTED_COORDS,
 
+    // buffering
     PF_BUFFER_SIZE,
 
 #ifdef PF_BUG_CATCHING

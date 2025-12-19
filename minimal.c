@@ -36,4 +36,5 @@ int main(int argc, char *argv[]) {
         }
         printf("finished line %d\n", y);
     }
+    pf_disconnect(&conn);
 }

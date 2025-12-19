@@ -1,13 +1,13 @@
-#include <sys/socket.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <errno.h>
+
+#include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <string.h>
-#include <unistd.h>
-#include <time.h>
-#include <stdlib.h>
-#include <errno.h>
 
 #include "pixelflut.h"
 
